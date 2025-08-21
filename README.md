@@ -1,8 +1,19 @@
 # Mini App
 <b>Quraşdırma</b> </br>
+PHP versiyası - 8.1 <br>
+
+
+<b>DB Bağlantısı</b> </br>
 <ul>
-<li>PHP versiyası - 8.1</li>
-<li>DB Bağlantısı - Localhost</li>
+<li>Verilənlər bazasının növü: MySQL</li>
+
+<li>Host adı: localhost</li>
+
+<li>İstifadəçi adı: root</li>
+
+<li>Şifrə: (Boşdur)</li>
+
+<li>Verilənlər bazasının adı: miniapp</li>
 </ul>
 
 <b>DB SQL</b> </br>

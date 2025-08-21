@@ -2,7 +2,7 @@
 
 return [
     'db' => [
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'name' => 'miniapp',
         'user' => 'root',
         'pass' => '',
