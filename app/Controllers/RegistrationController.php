@@ -17,9 +17,9 @@ class RegistrationController extends Controller
     {
         header('Content-Type: application/json; charset=utf-8');
         if (!Csrf::check($_POST['csrf'] ?? null)) return $this->res->json(['status' => 'error', 'message' => 'Invalid CSRF', 'fields' => []]);
-        $full = trim($_POST['full_name'] ?? '');
-        $email = trim($_POST['email'] ?? '');
-        $comp = trim($_POST['company'] ?? '');
+        $full = htmlspecialchars(trim($_POST['full_name'] ?? ''));
+        $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+        $comp = htmlspecialchars(trim($_POST['company'] ?? ''));
         $fields = [];
         if ($full === '') $fields['full_name'] = 'required';
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $fields['email'] = 'invalid';
