@@ -12,7 +12,7 @@ return [
         'admin' => 'admin@example.com',
         'host' => 'smtp.example.com',
         'user' => 'smtp_user',
-        'pass' => 'smtp_pass',
+        'pass' => 'smtp_password',
         'port' => 587,
         'secure'=> 'tls'
     ],
