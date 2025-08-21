@@ -12,7 +12,6 @@ class ExportController extends Controller
 {
     private function commonFilters(): array
     {
-        // DataTables export-da search array ola bilər
         $search = '';
         if (isset($_GET['search']['value'])) {
             $search = is_string($_GET['search']['value']) ? trim($_GET['search']['value']) : '';

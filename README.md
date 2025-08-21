@@ -15,7 +15,7 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );</code>
 
 
-<b>SMTP parametrlərinin yazılmalı olduğu fayl</b> </br>
+<b>DB və SMTP parametrlərinin yazılmalı olduğu fayl</b> </br>
 /config/config.php
 
 

@@ -17,7 +17,7 @@ return [
         'secure'=> 'tls'
     ],
     'app' => [
-        'base_url' => '/mini-app', // nginx/apache rewrite ilə /-dən işləyəcək
+        'base_url' => '/mini-app',
         'debug' => true
     ]
 ];

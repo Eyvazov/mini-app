@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc52af26-12cb-4e54-8e28-a501029c0ccf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mini-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/ExportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/ExportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Csrf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Csrf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Route/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Route/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Mailer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/auth/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/registration/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/registration/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/registrations/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/registrations/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="31aPEP7QYT7DEpouBUX9NaSEUus" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/opt/lampp/htdocs/mini-app/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/mini-app/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
@@ -100,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755759097524</updated>
-      <workItem from="1755759099063" duration="12423000" />
+      <workItem from="1755759099063" duration="12826000" />
     </task>
     <servers />
   </component>
