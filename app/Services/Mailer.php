@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use PHPMailer\PHPMailer\PHPMailer;
-use Throwable;
+
 
 class Mailer
 {

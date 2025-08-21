@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Core;
-
 class Request
 {
-
     public static function capture(): self
     {
         return new self;
@@ -39,5 +37,4 @@ class Request
     {
         return $_GET[$key] ?? $default;
     }
-
 }

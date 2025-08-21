@@ -12,6 +12,7 @@ class ExportController extends Controller
 {
     private function commonFilters(): array
     {
+        // DataTables export-da search array ola bilər
         $search = '';
         if (isset($_GET['search']['value'])) {
             $search = is_string($_GET['search']['value']) ? trim($_GET['search']['value']) : '';
@@ -20,7 +21,6 @@ class ExportController extends Controller
         }
 
         $idx = 0;
-
         if (isset($_GET['order'][0]['column'])) {
             $idx = (int)$_GET['order'][0]['column'];
         } elseif (isset($_GET['order_col'])) {
@@ -28,15 +28,14 @@ class ExportController extends Controller
         }
 
         $dir = 'ASC';
-
         if (isset($_GET['order'][0]['dir'])) {
             $dir = strtolower($_GET['order'][0]['dir']) === 'desc' ? 'DESC' : 'ASC';
         } elseif (isset($_GET['order_dir'])) {
             $dir = strtolower($_GET['order_dir']) === 'desc' ? 'DESC' : 'ASC';
         }
 
-        $cols = Registration::$columns;
-        $col = $col[$idx] ?? 'id';
+        $cols = \App\Models\Registration::$columns;
+        $col = $cols[$idx] ?? 'id';
 
         return [$search, $col, $dir];
     }

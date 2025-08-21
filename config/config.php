@@ -2,7 +2,7 @@
 
 return [
     'db' => [
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'name' => 'miniapp',
         'user' => 'root',
         'pass' => '',
@@ -12,13 +12,12 @@ return [
         'admin' => 'admin@example.com',
         'host' => 'smtp.example.com',
         'user' => 'smtp_user',
-        'pass' => 'smtp_password',
+        'pass' => 'smtp_pass',
         'port' => 587,
-        'secure' => 'tls',
+        'secure'=> 'tls'
     ],
-
     'app' => [
-        'base_url' => '/mini-app',
+        'base_url' => '/mini-app', // nginx/apache rewrite ilə /-dən işləyəcək
         'debug' => true
     ]
 ];

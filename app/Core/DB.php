@@ -5,6 +5,7 @@ namespace App\Core;
 use PDO;
 use PDOException;
 
+
 class DB
 {
     private static ?PDO $pdo = null;
@@ -18,7 +19,6 @@ class DB
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             ]);
         }
-
         return self::$pdo;
     }
 }

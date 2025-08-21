@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Layihənin kökü (root qovluq)
+    RewriteBase /mini-app/
+
+    # Əgər sorğu mövcud fayl və ya qovluğa düşürsə, bypass et
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Qalan bütün sorğuları index.php-yə yönləndir
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Təhlükəsizlik: bəzi faylları blokla
+<FilesMatch "\.(env|json|lock|md|sql|yml|yaml)$">
+    Require all denied
+</FilesMatch>

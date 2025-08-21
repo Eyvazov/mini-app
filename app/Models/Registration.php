@@ -5,9 +5,11 @@ namespace App\Models;
 use PDO;
 use App\Core\DB;
 
+
 class Registration
 {
     public static array $columns = ['id', 'full_name', 'email', 'company', 'created_at'];
+
 
     public static function existsByEmail(PDO $pdo, string $email): bool
     {
@@ -31,13 +33,11 @@ class Registration
             $st = $pdo->prepare('SELECT COUNT(*) FROM registrations WHERE full_name LIKE ? OR email LIKE ? OR company LIKE ?');
             $st->execute([$like, $like, $like]);
             $filtered = (int)$st->fetchColumn();
-        } else {
-            $filtered = $total;
-        }
+        } else $filtered = $total;
         return [$total, $filtered];
     }
 
-    public function datatable(PDO $pdo, ?string $search, string $orderCol, string $orderDir, int $start, int $length): array
+    public static function datatable(PDO $pdo, ?string $search, string $orderCol, string $orderDir, int $start, int $length): array
     {
         $where = '';
         $params = [];
@@ -45,7 +45,6 @@ class Registration
             $where = 'WHERE full_name LIKE ? OR email LIKE ? OR company LIKE ?';
             $params = ["%$search%", "%$search%", "%$search%"];
         }
-
         $sql = "SELECT id,full_name,email,company,created_at FROM registrations $where ORDER BY $orderCol $orderDir LIMIT $start,$length";
         $st = $pdo->prepare($sql);
         $st->execute($params);
@@ -57,7 +56,7 @@ class Registration
         $where = '';
         $params = [];
         if ($search) {
-            $where = 'WHERE ful_name LIKE ? OR email LIKE ? OR company LIKE ?';
+            $where = 'WHERE full_name LIKE ? OR email LIKE ? OR company LIKE ?';
             $params = ["%$search%", "%$search%", "%$search%"];
         }
         $sql = "SELECT id,full_name,email,company,created_at FROM registrations $where ORDER BY $orderCol $orderDir";

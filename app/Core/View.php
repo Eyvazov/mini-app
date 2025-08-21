@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core;
-
 class View
 {
     public static function render(string $tpl, array $data = []): void

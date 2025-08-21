@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core;
-
 class Csrf
 {
     public static function token(): string

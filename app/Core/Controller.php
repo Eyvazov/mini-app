@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core;
-
 abstract class Controller
 {
     public function __construct(protected array $config, protected Request $req, protected Response $res)

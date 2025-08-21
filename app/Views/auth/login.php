@@ -4,7 +4,7 @@
     <div class="alert alert-danger">
         <?= htmlspecialchars($_SESSION['flash_error']) ?>
     </div>
-    <?php unset($_SESSION['flash_error']); ?>
+    <?php unset($_SESSION['flash_error']); // flash mesajı bir dəfə göstərmək üçün ?>
 <?php endif; ?>
 
 <form method="post" action="login" class="mt-3">

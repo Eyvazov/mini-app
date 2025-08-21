@@ -16,56 +16,41 @@ class RegistrationController extends Controller
     public function store()
     {
         header('Content-Type: application/json; charset=utf-8');
-
-        if (!Csrf::check($_POST['csrf'] ?? null)) {
-            return $this->res->json(['status' => 'error', 'message' => 'Invalid CSRF token', 'fields' => []]);
-        }
-
+        if (!Csrf::check($_POST['csrf'] ?? null)) return $this->res->json(['status' => 'error', 'message' => 'Invalid CSRF', 'fields' => []]);
         $full = trim($_POST['full_name'] ?? '');
         $email = trim($_POST['email'] ?? '');
         $comp = trim($_POST['company'] ?? '');
         $fields = [];
-
-        if ($full === '') {
-            $fields['full_name'] = 'required';
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $fields['email'] = 'invalid';
-        }
-
-        if ($fields) {
-            return $this->res->json(['status' => 'error', 'message' => 'Validation Error', 'fields' => $fields]);
-        }
+        if ($full === '') $fields['full_name'] = 'required';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $fields['email'] = 'invalid';
+        if ($fields) return $this->res->json(['status' => 'error', 'message' => 'Validation error', 'fields' => $fields]);
 
         $pdo = $this->pdo();
 
         if (Registration::existsByEmail($pdo, $email)) {
             return $this->res->json([
                 'status' => 'error',
-                'message' => 'Email artıq mövcuddur!',
-                'fields' => ['email' => 'unique'],
+                'message' => 'Email artıq mövcuddur',
+                'fields' => ['email' => 'unique']
             ]);
         }
 
         Registration::create($pdo, $full, $email, $comp ?: null);
 
-        (new Mailer($this->config))->notifyAdmin('Yeni Qeydiyyat',
+        (new Mailer($this->config))->notifyAdmin('Yeni qeydiyyat',
             sprintf('Ad Soyad: %s<br>Email: %s<br>Şirkət: %s',
                 htmlspecialchars($full), htmlspecialchars($email), htmlspecialchars($comp))
         );
 
-        return $this->res->json(['status' => 'success', 'message' => 'Qeydiyyat Tamamlandı']);
+        return $this->res->json(['status' => 'success', 'message' => 'Qeydiyyat tamamlandı']);
     }
 
     public function listPage()
     {
-        if (empty($_SESSION['auth'])) {
-            return $this->view('auth/login', ['csrf' => Csrf::token()]);
-        }
+        if (empty($_SESSION['auth'])) return $this->view('auth/login', ['csrf' => Csrf::token()]);
 
         return $this->view('registrations/list', [
-            'base_url' => $this->config['app']['base_url'] ?? '',
+            'base_url' => $this->config['app']['base_url'] ?? ''
         ]);
     }
 }

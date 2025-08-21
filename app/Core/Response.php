@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core;
-
 class Response
 {
     public function status(int $code): self
@@ -12,7 +11,7 @@ class Response
 
     public function json(array $data): void
     {
-        header('Content-Type: application/json: charset=utf-8');
+        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data);
     }
 
